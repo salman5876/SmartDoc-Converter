@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartDoc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/pdf.png">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <div class="logo-container">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-text-smart">Smart</span>
+                        <span class="logo-text-doc">Doc</span>
+                    </div>
+                </div>
+                <!-- <h1>Converter Pro</h1> -->
+            </div>
+            <p class="subtitle">Transform your images into professional, editable PDF documents</p>
+        </header>
+
+        <div class="upload-section">
+            <div class="card">
+                <div class="upload-box" id="dropZone">
+                    <div class="upload-icon-wrapper">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <div class="upload-text">
+                        <h3>Drop your images here</h3>
+                        <p>Supported formats: JPG, PNG, GIF (Max size: 10MB per file)</p>
+                        <p class="feature-text">Multiple files supported</p>
+                        <div class="divider">
+                            <span>OR</span>
+                        </div>
+                        <input type="file" id="fileInput" accept="image/*" multiple hidden>
+                        <button id="browseBtn" class="btn-primary">
+                            <i class="fas fa-folder-open"></i> Select Images
+                        </button>
+                    </div>
+                </div>
+
+                <div id="preview" class="preview-section" style="display: none;">
+                    <div class="preview-header">
+                        <h3>Selected Images (<span id="imageCount">0</span>)</h3>
+                        <div class="header-buttons">
+                            <button class="btn-secondary" id="addMoreBtn">
+                                <i class="fas fa-plus"></i> Add More
+                            </button>
+                            <button class="btn-icon" id="backBtn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="preview-grid" id="previewGrid">
+                        <!-- Image previews will be added here -->
+                    </div>
+
+                    <div class="conversion-options">
+                        <h4>Conversion Options</h4>
+                        <div class="options-grid">
+                            <div class="option-card" id="separateOption">
+                                <i class="fas fa-file-pdf"></i>
+                                <h5>Separate PDFs</h5>
+                                <p>Create individual PDF for each image</p>
+                            </div>
+                            <div class="option-card" id="mergedOption">
+                                <i class="fas fa-object-group"></i>
+                                <h5>Merged PDF</h5>
+                                <p>Combine all images into one PDF</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <!-- Single file button -->
+                        <button id="convertSingleBtn" class="btn-primary" style="display: none;">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </button>
+                        <!-- Multiple files buttons -->
+                        <div id="multipleButtons" style="display: none; width: 100%;">
+                            <button id="convertSeparateBtn" class="btn-primary">
+                                <i class="fas fa-file-pdf"></i> Download Separate PDFs
+                            </button>
+                            <button id="convertMergedBtn" class="btn-primary btn-accent">
+                                <i class="fas fa-object-group"></i> Download Merged PDF
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div id="loadingOverlay" class="loading-overlay">
+            <div class="loader"></div>
+            <p id="loadingText">Converting your images...</p>
+        </div>
+
+        <!-- Success Toast -->
+        <div id="successToast" class="toast">
+            <span id="toastMessage"> </span>
+        </div>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="footer-content">
+                <p>
+                    Designed & Developed by
+                    <strong>The Dev Knights</strong>
+                </p>
+                <div class="footer-links">
+                    <a href="https://www.thedevknights.com" target="_blank">
+                        <i class="fas fa-globe"></i> www.thedevknights.com
+                    </a>
+                    <span class="divider">|</span>
+                    <a href="mailto:info@thedevknights.com">
+                        <i class="fas fa-envelope"></i> info@thedevknights.com
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
