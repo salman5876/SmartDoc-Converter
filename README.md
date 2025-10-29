@@ -1,6 +1,6 @@
-# SmartDoc Converter Pro
+# SmartDoc Converter
 
-SmartDoc Converter Pro is a modern, user-friendly web application that allows users to convert images to editable PDF documents with ease. Whether you need to convert a single image or multiple images, SmartDoc provides flexible options to meet your needs.
+SmartDoc Converter is a modern, user-friendly web application that allows users to convert images to editable PDF documents with ease. Whether you need to convert a single image or multiple images, SmartDoc provides flexible options to meet your needs.
 
 ## 🌟 Features
 
@@ -70,8 +70,7 @@ Feel free to submit issues and enhancement requests!
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
+This project is licensed under the thedevknights.com
 ## 🎯 Future Enhancements
 
 - Additional image format support
@@ -82,4 +81,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-Made with ❤️ by Your Name
+Designed & Developed by The Dev Knights | Salman Ahmed
